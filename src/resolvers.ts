@@ -1,8 +1,8 @@
-import hello from "./api/hello";
+import {hello} from "./api/hello";
 
 const resolvers = {
     Query: {
-        ...{hello},
+        hello,
     },
 };
 
