@@ -1,5 +1,5 @@
 import {gql} from "apollo-server";
-import hello from "./api/hello";
+import {typeDefs as helloTypeDefs} from "./api/hello";
 
 const root = gql`
     type Query {
@@ -17,6 +17,6 @@ const common = gql`
     }
 `;
 
-const typeDefs = [root, common, hello.typeDefs];
+const typeDefs = [root, common, helloTypeDefs];
 
 export default typeDefs;

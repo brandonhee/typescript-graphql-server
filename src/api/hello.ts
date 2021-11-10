@@ -1,15 +1,15 @@
 import {gql} from "apollo-server";
 
-const typeDefs = gql`
+export const typeDefs = gql`
+    type HelloResult {
+        result: String
+    }
     extend type Query {
-        hello(world: String!): String
+        hello(somewhere: String!): HelloResult
     }
 `;
 
-const resolvers = {
-    hello: (_obj, args, _context, _info) => {
-        return "hello " + args.world;
-    },
-};
-
-export default {typeDefs, resolvers};
+export function hello(_obj, args) {
+    console.log(args);
+    return {result: "hello " + args.somewhere};
+}

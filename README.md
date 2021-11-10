@@ -1,6 +1,6 @@
 # graphql boilerplate
 
-A graphql boilerplate that is very opinionated.
+A graphql boilerplate that is very opinionated. It is based on a collection of works from other repository.
 
 # Language
 
@@ -25,6 +25,8 @@ Uses Jest
 # Pre-commit Hooks
 
 Uses Husky to run linting and testing prior to commits.
+
+To uninstall: `npm uninstall husky && git config --unset core.hooksPath`
 
 # Layout
 
